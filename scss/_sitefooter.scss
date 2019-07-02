@@ -2,24 +2,32 @@
 @import 'mixins';
 
 footer.sitefooter {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   background-color: map-get($colors, kati-forner--black);
+  display: flex;
 
-  h1 {
-    text-align: center;
-  }
+  .sitefooter {
+    &-wrapper {
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-  h1 a {
-    font-family: $font--Nanum;
-    font-weight: 400;
-    font-size: 4.8vmin;
-    color: map-get($colors, kati-forner--pale-red);
-    transition: $transition-eo;
+      h1 {
+        line-height: 1;
+        display: flex;
+      }
 
-    &:hover {
-      color: map-get($colors, kati-forner--white);
-    }
-  }
+      h1 a {
+        color: map-get($colors, kati-forner--cream);
+        font-family: $font--Nanum;
+        font-weight: 400;
+        font-size: 3.6vmin;
+        transition: $transition-eo;
+
+        &:hover {
+          color: map-get($colors, kati-forner--white);
+        }
+      }
+    } // END &-wrapper
+  } // END .sitefooter
 } // END footer.sitefooter

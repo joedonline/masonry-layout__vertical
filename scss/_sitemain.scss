@@ -1,0 +1,52 @@
+main.sitemain {
+  padding: 0;
+
+  .sitemain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    &-wrapper {
+      position: relative;
+    }
+
+    &-content {
+      padding: 0 4em 4em;
+
+      .content{
+        &-title,
+        &-wrapper {
+          color: map-get($colors, kati-forner--white);
+        }
+
+        &-title {
+          text-align: center;
+          text-transform: uppercase;
+          font-family: $font--Nanum;
+          font-weight: 800;
+          font-size: 3.6vmin;
+          line-height: 1;
+          letter-spacing: 1px;
+          margin-bottom: 0.75em;
+        }
+
+        &-wrapper {
+          background: kati-forner--rgba('black', 1);
+          min-height: 200px; // temporary
+          border-radius: 2em;
+          overflow: hidden;
+        }
+      } // END .content
+    } // END &-wrapper
+
+    &-bg {
+      position: absolute;
+      top: 0;
+      z-index: -10;
+      width: 100%;
+      min-height: 100%;
+      background-color: map-get($colors, kati-forner--white);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0% 40%);
+    }
+  }
+}

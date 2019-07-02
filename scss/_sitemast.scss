@@ -1,21 +1,26 @@
 header.sitemast {
+  position: relative;
+  flex: 0 0 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  min-height: 702px;
 
   & > * {
     width: 50%;
     align-self: center;
+    z-index: 1000;
   }
 
   h2 {
     text-align: center;
     font-size: 18vmin;
+    font-weight: 400;
     letter-spacing: 1.414rem;
   }
 
   hr {
-    border: 0.03125em solid map-get($colors, kati-forner--white);
+    border: 0.5px solid map-get($colors, kati-forner--red);
     margin-top: 1.75em;
     margin-bottom: 2em;
   }
@@ -30,6 +35,7 @@ header.sitemast {
     text-align: center;
     text-transform: lowercase;
     font-size: 5.2vmin;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.64em;
+    width: 100%;
   }
 }
