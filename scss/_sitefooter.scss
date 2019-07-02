@@ -1,0 +1,25 @@
+@import 'variables';
+@import 'mixins';
+
+footer.sitefooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: map-get($colors, kati-forner--black);
+
+  h1 {
+    text-align: center;
+  }
+
+  h1 a {
+    font-family: $font--Nanum;
+    font-weight: 400;
+    font-size: 4.8vmin;
+    color: map-get($colors, kati-forner--pale-red);
+    transition: $transition-eo;
+
+    &:hover {
+      color: map-get($colors, kati-forner--white);
+    }
+  }
+} // END footer.sitefooter

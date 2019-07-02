@@ -1,0 +1,35 @@
+header.sitemast {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  & > * {
+    width: 50%;
+    align-self: center;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 18vmin;
+    letter-spacing: 1.414rem;
+  }
+
+  hr {
+    border: 0.03125em solid map-get($colors, kati-forner--white);
+    margin-top: 1.75em;
+    margin-bottom: 2em;
+  }
+
+  h2,
+  p {
+    color: map-get($colors, kati-forner--white);
+    line-height: 1;
+  }
+
+  p {
+    text-align: center;
+    text-transform: lowercase;
+    font-size: 5.2vmin;
+    letter-spacing: 0.5em;
+  }
+}

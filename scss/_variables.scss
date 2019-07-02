@@ -1,0 +1,39 @@
+@import "typography";
+
+$transition-e: all .16s ease;
+$transition-ei: all .16s ease-in;
+$transition-eio: all .16s ease-in-out;
+$transition-eo: all .16s ease-out;
+
+$break-point: (
+ xl: 75em,     // 1200px
+ lg: 65.625em,  // 1050px
+ md_min: 56.3125em, // 901px
+ md: 56.25em,  // 900px
+ sm_md: 46.875em, // 750px
+ sm: 37.5em,   // 600px
+ xs: 28.125em,  // 450px
+);
+
+// GENERAL TYPEFACES
+$font--Arapey: 'Arapey', serif; // Bodoni alternative
+$font--Nanum: 'Nanum Gothic', sans-serif; // Sans
+
+// GENERAL COLOR SCHEMES
+$colors: (
+ // Kati Forner color scheme: Heymama
+ kati-forner--cream: #F2D6BD,
+ kati-forner--red: #BF4E24,
+ kati-forner--pale-red: #BF755A,
+ kati-forner--white: #F2F2F2,
+ kati-forner--black: #0D0D0D
+);
+// RGB version
+@function kati-forner--rgba($name, $alpha) {
+        @if $name == 'cream' { @return rgba(242,214,189, $alpha); }
+  @else  if $name == 'red' { @return rgba(191,78,36, $alpha); }
+  @else  if $name == 'pale-red' { @return rgba(191,117,90, $alpha); }
+  @else  if $name == 'white' { @return rgba(242,242,242, $alpha); }
+  @else  if $name == 'black' { @return rgba(13,13,13, $alpha); }
+  @else { @return lime; } // indicates $name is not in the "list" above
+}

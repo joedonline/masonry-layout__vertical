@@ -1,0 +1,86 @@
+@import "variables";
+@import "mixins";
+/* reset ***************************************************************** */
+* {
+ margin: 0;
+ padding: 0;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ outline: none;
+}
+
+*,
+*::before,
+*::after {
+ box-sizing: inherit;
+}
+
+html {
+ scroll-behavior: smooth;
+ box-sizing: border-box;
+ font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+ @include media__max-width(map-get($break-point, lg)) {
+  font-size: 50%;
+ }
+}
+
+body {
+ font-family: $font--Nanum; // Sans
+ font-size: 3.2vmin;
+ color: map-get($colors, kati-forner--black);
+ line-height: 1.414; // = 40px
+}
+
+ul {
+ list-style: none;
+}
+
+ul,
+li {
+ margin: 0;
+}
+
+a {
+ text-decoration: none;
+ color: map-get($colors, fb--blue);
+ transition: all .32s ease-in;
+
+ &:hover,
+ &:active {
+  color: black;
+ }
+}
+
+// GUTTERS
+header,
+nav,
+main,
+aside,
+footer {
+ padding: 2em 4em;
+
+ @include media__max-width(map-get($break-point, sm_md)) {
+   padding-left: 2em;
+   padding-right: 2em;
+ }
+}
+
+// TYPOGRAPHY
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ font-family: $font--Arapey; // Bodoni alternative
+}
+
+h1 { font-size: 8vmin; }
+h2 { font-size: 6.4vmin; }
+h3 { font-size: 5.6vmin; }
+h4 { font-size: 4vmin; }
+h5 { font-size: 3.6vmin; }
+h6 { font-size: 3.4vmin; }
+
+/* END reset ***************************************************************** */

@@ -1,0 +1,10 @@
+@import 'base';
+
+body {
+  background: url('assets/masonry__background-01.png') center/cover no-repeat;
+  position: relative;
+  min-height: 100vh;
+}
+
+@import 'sitemast';
+@import 'sitefooter';
