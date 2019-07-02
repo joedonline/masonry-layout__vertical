@@ -1,5 +1,5 @@
 main.sitemain {
-  padding: 0;
+  padding: 4em 0 0;
 
   .sitemain {
     position: absolute;
@@ -27,13 +27,26 @@ main.sitemain {
           font-size: 3.6vmin;
           line-height: 1;
           letter-spacing: 1px;
-          margin-bottom: 0.75em;
+          margin-bottom: 1.5em;
+
+          &::before,
+          &::after {
+            content: "::"
+          }
+
+          &::before {
+            padding-right: 0.25em;
+          }
+
+          &::after {
+            padding-left: 0.25em;
+          }
         }
 
         &-wrapper {
           background: kati-forner--rgba('black', 1);
           min-height: 200px; // temporary
-          border-radius: 2em;
+          border-radius: 0.25em;
           overflow: hidden;
         }
       } // END .content

@@ -4,7 +4,7 @@ header.sitemast {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  min-height: 702px;
+  min-height: 100vh;
 
   & > * {
     width: 50%;
@@ -34,7 +34,7 @@ header.sitemast {
   p {
     text-align: center;
     text-transform: lowercase;
-    font-size: 5.2vmin;
+    font-size: 4.2vmin;
     letter-spacing: 0.64em;
     width: 100%;
   }
