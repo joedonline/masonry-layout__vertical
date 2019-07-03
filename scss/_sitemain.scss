@@ -44,13 +44,35 @@ main.sitemain {
         }
 
         &-wrapper {
-          background: kati-forner--rgba('black', 1);
+          background: kati-forner--rgba('white', 1);
           min-height: 200px; // temporary
           border-radius: 0.25em;
           overflow: hidden;
         }
+
+        &-wrapper .gallery {
+          display: flex;
+          flex-flow: row wrap;
+          width: 100%;
+          padding: 4px;
+
+          &-item {
+            flex: auto;
+            height: 250px;
+            // min-width: 150px;
+            width: auto;
+            margin: 4px;
+            border-radius: 0.25em;
+            cursor: pointer;
+
+            &:last-child {
+              flex: 0 0 33.3333%;
+              width: auto;
+            }
+          }
+        } // END &-wrapper .gallery
       } // END .content
-    } // END &-wrapper
+    } // END .sitemain &-wrapper
 
     &-bg {
       position: absolute;
