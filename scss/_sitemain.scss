@@ -27,6 +27,7 @@ main.sitemain {
           font-size: 3.6vmin;
           line-height: 1;
           letter-spacing: 1px;
+          color: kati-forner--rgba('cream', 1);
           margin-bottom: 1.5em;
 
           &::before,
@@ -78,16 +79,10 @@ main.sitemain {
             }
 
             &-overlay,
+            &-plus,
             &-content {
+              transition: $transition-eio;
               cursor: pointer;
-
-              &.show {
-                transform: translateY(0) !important;
-              }
-
-              &.hide {
-                transform: translateY(200px) !important;
-              }
             }
 
             &-overlay {
@@ -99,8 +94,16 @@ main.sitemain {
               border-radius: 0.25em;
               background-color: kati-forner--rgba('red', 0.48);
               box-sizing: content-box;
-              transition: $transition-eo;
-            }
+              opacity: 0;
+
+              &.show {
+                opacity: 1;
+              }
+
+              &.hide {
+                opacity: 0;
+              }
+            } // END &-overlay
 
             &-plus {
               position: absolute;
@@ -125,7 +128,7 @@ main.sitemain {
               &.hide {
                 transform: translateX(120px);
               }
-            }
+            } // END &-plus
 
             &-content {
               position: absolute;
@@ -141,7 +144,6 @@ main.sitemain {
               flex-direction: column;
               padding-left: 1.5vmax;
               padding-bottom: 1.5vmax;
-              transition: $transition-eio;
 
               &__title,
               &__description {
@@ -151,12 +153,21 @@ main.sitemain {
 
               &__title { // <div>
                 font-size: 3vmin;
+                font-family: $font--Nanum;
                 margin-bottom: 0.5em;
               }
 
               &__description { // <div>
                 bottom: 0;
                 font-size: 2vmin;
+              }
+
+              &.show {
+                transform: translateY(0) !important;
+              }
+
+              &.hide {
+                transform: translateY(200px) !important;
               }
             } // END &-content
           } // END &-item
