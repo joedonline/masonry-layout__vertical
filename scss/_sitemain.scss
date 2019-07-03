@@ -50,26 +50,80 @@ main.sitemain {
           overflow: hidden;
         }
 
-        &-wrapper .gallery {
+        &-wrapper .gallery { // <ul>
           display: flex;
           flex-flow: row wrap;
           width: 100%;
           padding: 4px;
 
-          &-item {
+          &-item { // <li>
             flex: auto;
             height: 250px;
             // min-width: 150px;
             width: auto;
             margin: 4px;
             border-radius: 0.25em;
-            cursor: pointer;
+            position: relative;
 
             &:last-child {
               flex: 0 0 33.3333%;
               width: auto;
             }
-          }
+
+            img {
+              width: auto;
+              height: 100%;
+            }
+
+            &-overlay,
+            &-content {
+              transition: $transition-eo;
+              cursor: pointer;
+            }
+
+            &-overlay {
+              position: absolute;
+              z-index: 100;
+              margin: auto;
+              display: block;
+              width: 100%;
+              height: 100%;
+              border-radius: 0.25em;
+              transform: translate(0.20em, 0.175em);
+              background-color: kati-forner--rgba('black', 0.72);
+            }
+
+            &-content {
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              z-index: 200;
+              margin: auto;
+              width: 72%;
+              display: flex;
+              justify-content: flex-end;
+              flex-direction: column;
+              padding-bottom: 1.5vmax;
+
+              &__title,
+              &__description {
+                line-height: 1.16;
+                text-align: left;
+              }
+
+              &__title { // <div>
+                font-size: 3vmin;
+                margin-bottom: 0.5em;
+              }
+
+              &__description { // <div>
+                bottom: 0;
+                font-size: 2vmin;
+              }
+            } // END &-content
+          } // END &-item
         } // END &-wrapper .gallery
       } // END .content
     } // END .sitemain &-wrapper
