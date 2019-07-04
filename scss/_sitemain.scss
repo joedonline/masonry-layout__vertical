@@ -59,13 +59,21 @@ main.sitemain {
 
           &-item { // <li>
             flex: auto;
-            max-height: 250px;
+            max-height: 200px;
             // min-width: 150px;
             width: auto;
             margin: 4px;
             border-radius: 0.25em;
             overflow: hidden;
             position: relative;
+
+            @include media__max-width(map-get($break-point, lg)) {
+              max-height: 152px;
+            }
+
+            @include media__max-width(map-get($break-point, md)) {
+              max-height: 120px;
+            }
 
             &:last-child {
               flex: 0 0 33.3333%;
@@ -170,7 +178,7 @@ main.sitemain {
               }
 
               &.hide {
-                transform: translateY(200px) !important;
+                transform: translateY(500px) !important;
               }
             } // END &-content
           } // END &-item

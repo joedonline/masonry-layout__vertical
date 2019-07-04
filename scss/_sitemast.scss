@@ -6,10 +6,39 @@ header.sitemast {
   flex-direction: column;
   min-height: 100vh;
 
+  @include media__min-width(map-get($break-point, lg)) {
+    padding: 0;
+  }
+
+  @include media__max-width(map-get($break-point, md)) {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  @include media__max-width(map-get($break-point, sm)) {
+    padding-right: 1.5em;
+  }
+
+  @include media__max-width(map-get($break-point, xs)) {
+    padding-right: 1em;
+  }
+
   & > * {
-    width: 50%;
+    width: 56%;
     align-self: center;
     z-index: 1000;
+
+    @include media__max-width(map-get($break-point, xl)) {
+      width: 80%;
+    }
+
+    @include media__max-width(map-get($break-point, lg)) {
+      width: 100%;
+    }
+
+    @include media__max-width(map-get($break-point, sm)) {
+      width: 88%;
+    }
   }
 
   h2 {
@@ -17,6 +46,14 @@ header.sitemast {
     font-size: 18vmin;
     font-weight: 400;
     letter-spacing: 1.414rem;
+
+    @include media__max-width(map-get($break-point, md)) {
+      font-size: 15vmin;
+    }
+
+    @include media__max-width(map-get($break-point, xs)) {
+      font-size: 12vmin;
+    }
   }
 
   hr {
@@ -37,5 +74,10 @@ header.sitemast {
     font-size: 4.2vmin;
     letter-spacing: 0.64em;
     width: 100%;
+
+    @include media__max-width(map-get($break-point, xs)) {
+      font-size: 5.6vmin;
+      letter-spacing: 0.4em;
+    }
   }
 }
