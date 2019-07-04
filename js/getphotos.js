@@ -1,5 +1,0 @@
-(function() {
-  // START
-  
-  // THE END
-})();

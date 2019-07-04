@@ -1,0 +1,62 @@
+[
+  {
+    "list-id": "gallery-item-01",
+    "overlay-class": "photo-01-overlay",
+    "plus-class": "photo-01-plus",
+    "img-src": "images/photo-01.jpg",
+    "img-alt": "Ennui tumblr pork belly selfies.",
+    "content": {
+      "id": "photo-01-content",
+      "title": "Chambray kogi cliche",
+      "description": "Microdosing shabby chic cliche retro, swag tbh master cleanse fingerstache."
+    }
+  },
+  {
+    "list-id": "gallery-item-02",
+    "overlay-class": "photo-02-overlay",
+    "plus-class": "photo-02-plus",
+    "img-src": "images/photo-02.jpg",
+    "img-alt": "Lorem ipsum dolor amet locavore succulents tumblr.",
+    "content": {
+      "id": "photo-02-content",
+      "title": "Keffiyeh retro paleo bespoke chillwave",
+      "description": "Four loko pinterest franzen taiyaki lyft intelligentsia."
+    }
+  },
+  {
+    "list-id": "gallery-item-03",
+    "overlay-class": "photo-03-overlay",
+    "plus-class": "photo-03-plus",
+    "img-src": "images/photo-03.jpg",
+    "img-alt": " Squid twee man braid thundercats.",
+    "content": {
+      "id": "photo-03-content",
+      "title": "Vaporware street art",
+      "description": "Forage subway tile bitters swag. Pork belly tousled truffaut hella snackwave."
+    }
+  },
+  {
+    "list-id": "gallery-item-04",
+    "overlay-class": "photo-04-overlay",
+    "plus-class": "photo-04-plus",
+    "img-src": "images/photo-04.jpg",
+    "img-alt": "Ennui tumblr pork belly selfies.",
+    "content": {
+      "id": "photo-04-content",
+      "title": "Kogi shabby chic green juice",
+      "description": "Green juice locavore 90's crucifix, letterpress blue bottle."
+    }
+  },
+  {
+    "list-id": "gallery-item-05",
+    "overlay-class": "photo-05-overlay",
+    "plus-class": "photo-05-plus",
+    "img-src": "images/photo-05.jpg",
+    "img-alt": "Street art marfa franzen cronut ",
+    "content": {
+      "id": "photo-05-content",
+      "title": "Taxidermy leggings polaroid",
+      "description": "Mlkshk everyday carry art party echo park four dollar toast paleo cold-pressed."
+    }
+  }
+]
