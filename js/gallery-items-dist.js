@@ -5,16 +5,12 @@
 
   async function getPhotos() {
     var response = await fetch('fake-api/gallery.json');
-    var data = await response.json();
-    return data;
+    return await response.json();
   }
 
   getPhotos().then(function (data) {
     var list = data.map(function (item) {
-      console.log('item', item);
-
       var gallery = document.getElementById('gallery');
-
       var listOpen = '<li id="' + item.list_id + '" class="gallery-item" style="background: url(' + item.img_src + ') center/cover no-repeat;">';
       var overlay = '<div id="' + item.overlay_id + '" class="gallery-item-overlay hide"></div>';
       var plus = '<div id="' + item.plus_id + '" class="gallery-item-plus hide">&plus;</div>';
