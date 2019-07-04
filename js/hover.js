@@ -1,14 +1,12 @@
-'use strict';
-
-(function () {
+(function() {
   // START
 
-  var galleryItem = document.getElementById('gallery-item-01');
-  var photoOverlay = document.getElementById('photo-01-overlay');
-  var photoPlus = document.getElementById('photo-01-plus');
-  var photoContent = document.getElementById('photo-01-content');
+  let galleryItem = document.getElementById('gallery-item-01');
+  let photoOverlay = document.getElementById('photo-01-overlay');
+  let photoPlus = document.getElementById('photo-01-plus');
+  let photoContent = document.getElementById('photo-01-content');
 
-  galleryItem.addEventListener('mouseenter', function () {
+  galleryItem.addEventListener('mouseenter', function() {
     photoOverlay.classList.remove("hide");
     photoOverlay.classList.add("show");
 
@@ -19,7 +17,7 @@
     photoContent.classList.add("show");
   });
 
-  galleryItem.addEventListener('mouseleave', function () {
+  galleryItem.addEventListener('mouseleave', function() {
     photoOverlay.classList.remove("show");
     photoOverlay.classList.add("hide");
 
@@ -32,4 +30,3 @@
 
   // THE END
 })();
-//# sourceMappingURL=hover-dist.js.map
