@@ -3,12 +3,8 @@
 (function () {
   // START
 
-  async function getPhotos() {
-    var response = await fetch('fake-api/gallery.json');
-    return await response.json();
-  }
-
-  getPhotos().then(function (data) {
+  var ep = 'fake-api/gallery.json';
+  getItems(ep).then(function (data) {
     var list = data.map(function (item) {
       var gallery = document.getElementById('gallery');
       var listOpen = '<li id="' + item.list_id + '" class="gallery-item" style="background: url(' + item.img_src + ') center/cover no-repeat;">';

@@ -2,15 +2,9 @@
 
 (function () {
   // START
-
-  async function getItems() {
-    var response = await fetch('fake-api/gallery.json');
-    return await response.json();
-  }
-
-  getItems().then(function (data) {
+  var ep = 'fake-api/gallery.json';
+  getItems(ep).then(function (data) {
     data.map(function (item) {
-      console.log('[getItems] item', item);
       hoverHandler(item.list_id, item.overlay_id, item.plus_id, item.content.id);
       return;
     });

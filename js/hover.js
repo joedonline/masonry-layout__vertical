@@ -1,14 +1,8 @@
 (function() {
   // START
-
-  async function getItems() {
-    let response = await fetch('fake-api/gallery.json');
-    return await response.json();
-  }
-
-  getItems().then(data => {
+  const ep = 'fake-api/gallery.json';
+  getItems(ep).then(data => {
     data.map(item => {
-      console.log('[getItems] item', item);
       hoverHandler(item.list_id, item.overlay_id, item.plus_id, item.content.id);
       return;
     });

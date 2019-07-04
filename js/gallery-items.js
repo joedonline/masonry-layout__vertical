@@ -1,12 +1,8 @@
 (function() {
   // START
 
-  async function getPhotos() {
-    let response = await fetch('fake-api/gallery.json');
-    return await response.json();
-  }
-
-  getPhotos().then(data => {
+  const ep = 'fake-api/gallery.json';
+  getItems(ep).then(data => {
     const list = data.map(item => {
       const gallery = document.getElementById('gallery');
       const listOpen =    `<li id="${item.list_id}" class="gallery-item" style="background: url(${item.img_src}) center/cover no-repeat;">`;
