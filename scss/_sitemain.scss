@@ -1,5 +1,5 @@
 main.sitemain {
-  padding: 4em 0 0;
+  padding: 12vmax 0 0;
 
   .sitemain {
     position: absolute;
@@ -113,7 +113,7 @@ main.sitemain {
               display: block;
               height: 100%;
               width: 28%;
-              font-size: 5vmax;
+              font-size: 4vmax;
               color: kati-forner--rgba('cream', 0.56);
               background: kati-forner--rgba('black', 0.48);
               display: flex;
@@ -126,7 +126,7 @@ main.sitemain {
               }
 
               &.hide {
-                transform: translateX(120px);
+                transform: translateX(300px);
               }
             } // END &-plus
 
@@ -147,12 +147,14 @@ main.sitemain {
 
               &__title,
               &__description {
+                font-weight: 800;
                 line-height: 1.16;
                 text-align: left;
+                text-shadow: 0.125em 0.125em 0.25em kati-forner--rgba('black', 0.4);
               }
 
               &__title { // <div>
-                font-size: 3vmin;
+                font-size: 3.25vmin;
                 font-family: $font--Nanum;
                 margin-bottom: 0.5em;
               }
@@ -160,6 +162,7 @@ main.sitemain {
               &__description { // <div>
                 bottom: 0;
                 font-size: 2vmin;
+                color: kati-forner--rgba('white', 0.8);
               }
 
               &.show {
@@ -182,7 +185,7 @@ main.sitemain {
       width: 100%;
       min-height: 100%;
       background-color: map-get($colors, kati-forner--white);
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0% 40%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0% 40vmax);
     }
   }
 }

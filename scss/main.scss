@@ -25,7 +25,7 @@ body {
       background-image:
         radial-gradient(
           circle farthest-corner,
-          kati-forner--rgba('black', 0.48),
+          kati-forner--rgba('black', 0.16),
           black
         );
     }
@@ -38,7 +38,8 @@ body {
     .spacer {
       position: relative;
       height: 360px;
-      background: url('assets/masonry__background-01.png') center/cover no-repeat;
+      background: linear-gradient(33deg, kati-forner--rgba('pale-red', 0.56), kati-forner--rgba('red', 0.56)),
+                  url('assets/masonry__background-01.png') center/cover no-repeat;
       background-attachment: fixed;
     }
   }
