@@ -153,6 +153,11 @@ main.sitemain {
               padding-left: 1.5vmax;
               padding-bottom: 1.5vmax;
 
+              @include media__max-width(map-get($break-point, md)) {
+                padding-left: 0.75vmax;
+                padding-right: 0.75vmax;
+              }
+
               &__title,
               &__description {
                 font-weight: 800;
@@ -165,12 +170,28 @@ main.sitemain {
                 font-size: 3.25vmin;
                 font-family: $font--Nanum;
                 margin-bottom: 0.5em;
+
+                @include media__max-width(map-get($break-point, md)) {
+                  font-size: 56%;
+                }
+
+                @include media__max-width(map-get($break-point, sm)) {
+                  font-size: 92%;
+                }
               }
 
               &__description { // <div>
                 bottom: 0;
                 font-size: 2vmin;
                 color: kati-forner--rgba('white', 0.8);
+
+                @include media__max-width(map-get($break-point, md)) {
+                  font-size: 40%;
+                }
+
+                @include media__max-width(map-get($break-point, sm)) {
+                  font-size: 72%;
+                }
               }
 
               &.show {

@@ -25,14 +25,14 @@ body {
       background-image:
         radial-gradient(
           circle farthest-corner,
-          kati-forner--rgba('black', 0.16),
+          kati-forner--rgba('black', 0.08),
           black
         );
     }
 
     .overlay-2 {
       z-index: -1100;
-      background-color: kati-forner--rgba('cream', 0.32);
+      background-color: kati-forner--rgba('cream', 0.4);
     }
 
     .spacer {

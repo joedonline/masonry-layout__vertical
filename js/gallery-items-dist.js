@@ -4,7 +4,7 @@
   // START
 
   var ep = 'fake-api/gallery.json';
-  getItems(ep).then(function (data) {
+  fetchItems(ep).then(function (data) {
     var list = data.map(function (item) {
       var gallery = document.getElementById('gallery');
       var listOpen = '<li id="' + item.list_id + '" class="gallery-item" style="background: url(' + item.img_src + ') center/cover no-repeat;">';

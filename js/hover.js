@@ -1,7 +1,7 @@
 (function() {
   // START
   const ep = 'fake-api/gallery.json';
-  getItems(ep).then(data => {
+  fetchItems(ep).then(data => {
     data.map(item => {
       hoverHandler(item.list_id, item.overlay_id, item.plus_id, item.content.id);
       return;

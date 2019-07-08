@@ -5,6 +5,7 @@ header.sitemast {
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
+  transform: translateY(3vmax);
 
   @include media__min-width(map-get($break-point, lg)) {
     padding: 0;
@@ -78,6 +79,26 @@ header.sitemast {
     @include media__max-width(map-get($break-point, xs)) {
       font-size: 5.6vmin;
       letter-spacing: 0.4em;
+    }
+  }
+
+  [caret] {
+    opacity: 0.24;
+  }
+
+  & > div { // NOTE: this div wraps both <p> and inner <div>
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    & > div { // caret wrapper
+      text-align: center;
+      margin-top: 3vmax;
+
+      img { // caret image
+
+      }
     }
   }
 }

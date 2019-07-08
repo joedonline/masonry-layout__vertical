@@ -3,7 +3,7 @@
 (function () {
   // START
   var ep = 'fake-api/gallery.json';
-  getItems(ep).then(function (data) {
+  fetchItems(ep).then(function (data) {
     data.map(function (item) {
       hoverHandler(item.list_id, item.overlay_id, item.plus_id, item.content.id);
       return;
